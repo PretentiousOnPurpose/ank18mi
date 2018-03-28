@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/main.css">
+    <meta charset="UTF-8">
+    <title>ISI Nuclear Interface</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+        </div>
+        <p>Nuclear Interface Control</p>
+        <div id="msgDiv">
+            <div id="mark"></div>
+            <button id="msgBtn">
+                Messages
+            </button>
+        </div>
+    </header>
+    <section id="sec">
+            <section id="MAIN">
+                <article id="Stat">
+                    <div id="missileStat">
+                        <p>Payload Analysis</p>
+                    </div>
+                    <div id="param">
+                        <p id="pluto">Plutonium: <span>0.2</span> Kg</p>
+                        <p id="temp">Temperature: <span>910</span> K</p>
+                        <p id="turb">Turbulance: <span>120</span> N</p>
+                        <p id="stab">Stability: <span>13.23</span></p>
+                        <p id="coor">Coordinates: NOT AVAILABLE</p>
+                        <p id="strike">Strike velocity: <span>102</span> m/s</p>
+                        <p id="radius">Impact radius: <span>12</span> KM</p>
+                    </div>
+                </article>
+                <article id="map">
+                    <div id="mapDiv">
+                        <p>Current Impact</p>
+                    </div>
+                    <div id="mapImg"></div>
+                </article>
+                <article id="timerArt">
+                    <div id="timeDiv">
+                        <p>Timing Portal</p>
+                    </div>
+                    <div id="timer">
+                        <div id="timerCont">
+                            <p id="min">45</p>
+                            <p id="colon">:</p>
+                            <p id="se">00</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        <section id="control">
+            <div><p id="BLINK">Target: Mysore, KA</p></div>
+            <button id="abort" onclick="abortStart()">Abort</button>
+        </section>
+    </section>
+    <div id="defuseModal" class="model">
+        <div id="defuseCont">
+            <div id="msgHead">
+                <p id="msgHeadTitle">Messages</p>
+                <p class="close">&times;</p>
+            </div>
+            <div id="msgs">
+                <div id="msg1"></div>
+                <div id="msg2"></div>
+                <div id="msg3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="abortModal" class="model">
+        <div id="abortCont">
+            <div id="abortHead">
+                <p id="abortHeadTitle">Abort Initialization</p>
+                <p class="close">&times;</p>
+            </div>
+            <div id="abortInput">
+                <p id="abortMsg"></p>
+                <input type="text" autocomplete="off" id="abort_pass" name="abort_pass" placeholder="Enter passcode here" onfocus="this.placeholder=' '" onblur="this.placeholder = 'Enter passcode here'">
+                <button id="submitBtn">Submit</button>
+                <p id="abortVerdict"></p>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2018, Inter-Services Intelligence, Pakistan</p>
+    </footer>
+    <script src="static/index.js"></script>
+    <script src="static/rand.js"></script>
+</body>
+</html>
